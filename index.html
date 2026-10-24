@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es" data-theme="oscuro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./icono.svg" />
+    <link rel="apple-touch-icon" href="./icono-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Herramienta guiada para identificar sensores electrónicos y visualizar sus características técnicas en el laboratorio." />
+    <meta name="theme-color" content="#1b1815" />
+    <title>SensoGuía</title>
+    <script>
+      // Aplica el tema guardado antes de pintar, para evitar un destello de color
+      try {
+        var t = localStorage.getItem('sg-tema') || 'oscuro'
+        if (t === 'auto') t = matchMedia('(prefers-color-scheme: light)').matches ? 'claro' : 'oscuro'
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-jI81X1oy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DhPKQF39.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
